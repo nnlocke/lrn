@@ -1,0 +1,243 @@
+---- Minecraft Crash Report ----
+// Everything's going to plan. No, really, that was supposed to happen.
+
+Time: 6/1/15 4:57 AM
+Description: Watching Server
+
+java.lang.Error
+	at alq.a(SourceFile:284)
+	at amj.a(SourceFile:402)
+	at ahb.k(SourceFile:260)
+	at ahd.m(SourceFile:490)
+	at xm.s_(SourceFile:1296)
+	at ahd.s_(SourceFile:277)
+	at qw.l(SourceFile:250)
+	at rj.a(SourceFile:255)
+	at mg.a(SourceFile:126)
+	at mj.a(SourceFile:88)
+	at ih.run(SourceFile:13)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:441)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at net.minecraft.server.MinecraftServer.z(SourceFile:576)
+	at po.z(SourceFile:305)
+	at net.minecraft.server.MinecraftServer.y(SourceFile:531)
+	at net.minecraft.server.MinecraftServer.run(SourceFile:447)
+	at java.lang.Thread.run(Thread.java:662)
+
+
+A detailed walkthrough of the error, its code path and all known details is as follows:
+---------------------------------------------------------------------------------------
+
+-- Head --
+Stacktrace:
+	at alq.a(SourceFile:284)
+	at amj.a(SourceFile:402)
+	at ahb.k(SourceFile:260)
+	at ahd.m(SourceFile:490)
+	at xm.s_(SourceFile:1296)
+	at ahd.s_(SourceFile:277)
+	at qw.l(SourceFile:250)
+	at rj.a(SourceFile:255)
+	at mg.a(SourceFile:126)
+	at mj.a(SourceFile:88)
+	at ih.run(SourceFile:13)
+	at java.util.concurrent.Executors$RunnableAdapter.call(Executors.java:441)
+	at java.util.concurrent.FutureTask$Sync.innerRun(FutureTask.java:303)
+	at java.util.concurrent.FutureTask.run(FutureTask.java:138)
+	at net.minecraft.server.MinecraftServer.z(SourceFile:576)
+	at po.z(SourceFile:305)
+	at net.minecraft.server.MinecraftServer.y(SourceFile:531)
+
+-- Thread Dump --
+Details:
+	Threads: "Netty Server IO #7" Id=25 RUNNABLE
+	at sun.nio.cs.UTF_16BE.newDecoder(UTF_16BE.java:26)
+	at java.lang.StringCoding$StringDecoder.<init>(StringCoding.java:116)
+	at java.lang.StringCoding$StringDecoder.<init>(StringCoding.java:108)
+	at java.lang.StringCoding.decode(StringCoding.java:177)
+	at java.lang.String.<init>(String.java:483)
+	at java.lang.String.<init>(String.java:539)
+	at ra.channelRead(SourceFile:65)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:332)
+	...
+
+
+"Netty Server IO #6" Id=24 RUNNABLE
+	at java.io.StringWriter.write(StringWriter.java:95)
+	at com.google.gson.stream.JsonWriter.string(JsonWriter.java:559)
+	at com.google.gson.stream.JsonWriter.writeDeferredName(JsonWriter.java:402)
+	at com.google.gson.stream.JsonWriter.value(JsonWriter.java:417)
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:690)
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:704)
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:642)
+	at com.google.gson.internal.Streams.write(Streams.java:68)
+	...
+
+
+"Netty Server IO #5" Id=23 RUNNABLE
+	at sun.nio.cs.UTF_16BE.newDecoder(UTF_16BE.java:26)
+	at java.lang.StringCoding$StringDecoder.<init>(StringCoding.java:116)
+	at java.lang.StringCoding$StringDecoder.<init>(StringCoding.java:108)
+	at java.lang.StringCoding.decode(StringCoding.java:177)
+	at java.lang.String.<init>(String.java:483)
+	at java.lang.String.<init>(String.java:539)
+	at ra.channelRead(SourceFile:65)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:332)
+	...
+
+
+"Netty Server IO #4" Id=22 RUNNABLE
+	at java.io.StringWriter.write(StringWriter.java:95)
+	at com.google.gson.stream.JsonWriter.string(JsonWriter.java:559)
+	at com.google.gson.stream.JsonWriter.writeDeferredName(JsonWriter.java:402)
+	at com.google.gson.stream.JsonWriter.value(JsonWriter.java:417)
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:690)
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:704)
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:642)
+	at com.google.gson.internal.Streams.write(Streams.java:68)
+	...
+
+
+"Netty Server IO #3" Id=21 RUNNABLE
+	at sun.nio.cs.UTF_16BE.newDecoder(UTF_16BE.java:26)
+	at java.lang.StringCoding$StringDecoder.<init>(StringCoding.java:116)
+	at java.lang.StringCoding$StringDecoder.<init>(StringCoding.java:108)
+	at java.lang.StringCoding.decode(StringCoding.java:177)
+	at java.lang.String.<init>(String.java:483)
+	at java.lang.String.<init>(String.java:539)
+	at ra.channelRead(SourceFile:65)
+	at io.netty.channel.AbstractChannelHandlerContext.invokeChannelRead(AbstractChannelHandlerContext.java:332)
+	...
+
+
+"Netty Server IO #2" Id=20 RUNNABLE
+	at java.io.StringWriter.write(StringWriter.java:95)
+	at com.google.gson.stream.JsonWriter.string(JsonWriter.java:559)
+	at com.google.gson.stream.JsonWriter.writeDeferredName(JsonWriter.java:402)
+	at com.google.gson.stream.JsonWriter.value(JsonWriter.java:417)
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:690)
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:704)
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:642)
+	at com.google.gson.internal.Streams.write(Streams.java:68)
+	...
+
+
+"Netty Server IO #1" Id=19 RUNNABLE
+	at sun.misc.URLClassPath.getLoader(URLClassPath.java:314)
+	-  locked sun.misc.URLClassPath@a98b52
+	at sun.misc.URLClassPath.getResource(URLClassPath.java:168)
+	at java.net.URLClassLoader$1.run(URLClassLoader.java:194)
+	at java.security.AccessController.doPrivileged(Native Method)
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:190)
+	at sun.misc.Launcher$ExtClassLoader.findClass(Launcher.java:229)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:306)
+	-  locked sun.misc.Launcher$ExtClassLoader@1372a1a
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:295)
+	-  locked sun.misc.Launcher$AppClassLoader@45a877
+	...
+
+
+"File IO Thread" Id=30 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at brp.c(SourceFile:51)
+	at brp.run(SourceFile:30)
+	at java.lang.Thread.run(Thread.java:662)
+
+
+"Server Watchdog" Id=28 RUNNABLE
+	at sun.management.ThreadImpl.dumpThreads0(Native Method)
+	at sun.management.ThreadImpl.dumpAllThreads(ThreadImpl.java:433)
+	at pt.run(SourceFile:43)
+	at java.lang.Thread.run(Thread.java:662)
+
+
+"Netty Server IO #0" Id=18 RUNNABLE
+	at java.io.StringWriter.write(StringWriter.java:95)
+	at com.google.gson.stream.JsonWriter.string(JsonWriter.java:559)
+	at com.google.gson.stream.JsonWriter.writeDeferredName(JsonWriter.java:402)
+	at com.google.gson.stream.JsonWriter.value(JsonWriter.java:417)
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:690)
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:704)
+	at com.google.gson.internal.bind.TypeAdapters$25.write(TypeAdapters.java:642)
+	at com.google.gson.internal.Streams.write(Streams.java:68)
+	...
+
+
+"Server console handler" Id=15 RUNNABLE
+	at java.io.FileInputStream.readBytes(Native Method)
+	at java.io.FileInputStream.read(FileInputStream.java:220)
+	at java.io.BufferedInputStream.read1(BufferedInputStream.java:256)
+	at java.io.BufferedInputStream.read(BufferedInputStream.java:317)
+	-  locked java.io.BufferedInputStream@f9f054
+	at sun.nio.cs.StreamDecoder.readBytes(StreamDecoder.java:264)
+	at sun.nio.cs.StreamDecoder.implRead(StreamDecoder.java:306)
+	at sun.nio.cs.StreamDecoder.read(StreamDecoder.java:158)
+	-  locked java.io.InputStreamReader@189bfd0
+	at java.io.InputStreamReader.read(InputStreamReader.java:167)
+	...
+
+
+"DestroyJavaVM" Id=14 RUNNABLE
+
+
+"Server thread" Id=12 RUNNABLE
+	at alq.a(SourceFile:284)
+	at amj.a(SourceFile:402)
+	at ahb.k(SourceFile:260)
+	at ahd.m(SourceFile:490)
+	at xm.s_(SourceFile:1296)
+	at ahd.s_(SourceFile:277)
+	at qw.l(SourceFile:250)
+	at rj.a(SourceFile:255)
+	...
+
+
+"Server Infinisleeper" Id=11 TIMED_WAITING
+	at java.lang.Thread.sleep(Native Method)
+	at pp.run(SourceFile:64)
+
+
+"Snooper Timer" Id=10 TIMED_WAITING on java.util.TaskQueue@6c0c88
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.util.TaskQueue@6c0c88
+	at java.util.TimerThread.mainLoop(Timer.java:509)
+	at java.util.TimerThread.run(Timer.java:462)
+
+
+"Signal Dispatcher" Id=4 RUNNABLE
+
+
+"Finalizer" Id=3 WAITING on java.lang.ref.ReferenceQueue$Lock@1091303
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.ReferenceQueue$Lock@1091303
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:118)
+	at java.lang.ref.ReferenceQueue.remove(ReferenceQueue.java:134)
+	at java.lang.ref.Finalizer$FinalizerThread.run(Finalizer.java:159)
+
+
+"Reference Handler" Id=2 WAITING on java.lang.ref.Reference$Lock@bf4c57
+	at java.lang.Object.wait(Native Method)
+	-  waiting on java.lang.ref.Reference$Lock@bf4c57
+	at java.lang.Object.wait(Object.java:485)
+	at java.lang.ref.Reference$ReferenceHandler.run(Reference.java:116)
+
+
+
+Stacktrace:
+	at pt.run(SourceFile:59)
+	at java.lang.Thread.run(Thread.java:662)
+
+-- System Details --
+Details:
+	Minecraft Version: 1.8
+	Operating System: Linux (i386) version 2.6.32-042stab090.5
+	Java Version: 1.6.0_26, Sun Microsystems Inc.
+	Java VM Version: Java HotSpot(TM) Server VM (mixed mode), Sun Microsystems Inc.
+	Memory: 452372976 bytes (431 MB) / 1054605312 bytes (1005 MB) up to 1054605312 bytes (1005 MB)
+	JVM Flags: 2 total; -Xmx1024M -Xms1024M
+	IntCache: cache: 0, tcache: 0, allocated: 12, tallocated: 94
+	Profiler Position: N/A (disabled)
+	Player Count: 0 / 5; []
+	Is Modded: Unknown (can't tell)
+	Type: Dedicated Server (map_server.txt)
