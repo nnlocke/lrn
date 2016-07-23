@@ -3,3 +3,5 @@ I am some file with text inside.
 New line here.
 
 Something was here before, but now it's different.
+
+This is the 4th line.
