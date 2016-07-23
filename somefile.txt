@@ -1,5 +1,5 @@
 I am some file with text inside.
 
-I have multiple lines.
+New line here.
 
-You are damaging my calm.
+Something was here before, but now it's different.
